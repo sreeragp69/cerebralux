@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section className="flex justify-center items-center sm:pt-32 sm:pb-24 bg-[hsl(var(--background))]  h-screen">
+    <section className="flex justify-center items-center  sm:pb-24 bg-[hsl(var(--background))]  h-screen">
       <div className="max-w-7xl mx-auto text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 2 }}
