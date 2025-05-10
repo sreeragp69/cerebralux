@@ -3,25 +3,22 @@ import servicesData from "../utils/index";
 
 const Services = () => {
   return (
-    <section className="py-10 px-4 bg-[hsl(var(--background))]  flex justify-center items-center">
+    <section className="py-10 px-4 bg-[hsl(var(--background))] flex justify-center items-center">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white font-playfair">
           Our Core Services
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {servicesData && servicesData.length > 0 ? (
-            servicesData.map((service, index) => (
+          {servicesData?.length > 0 ? (
+            servicesData.map((service) => (
               <Card
-                key={index}
+                key={service.title} // Using title or a unique identifier for the key
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
                 image={service.image}
-                link={`/services/${service.title
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
-                a
+                link={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
               />
             ))
           ) : (

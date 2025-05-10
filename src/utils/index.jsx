@@ -33,7 +33,7 @@ const servicesData = [
   },
   {
     icon: <FiFileText className="h-6 w-6 text-white" />,
-    title: "Public Relations (PR)",
+    title: "Public Relations",
     image: publicRelations,
     description:
       "Press coverage, media placements, event presence, and reputation management across channels.",

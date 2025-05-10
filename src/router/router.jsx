@@ -22,20 +22,12 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "vision", element: <Vision /> },
-      {
-        path: "services",
-        element: <Services />,
-        children: [
-          { path: "personal-branding", element: <PersonalBranding /> },
-          {
-            path: "social-media-management",
-            element: <SocialMediaManagement />,
-          },
-          { path: "video-production", element: <VideoProduction /> },
-          { path: "public-relations", element: <PublicRelations /> },
-          { path: "corporate-podcasting", element: <CorporatePodcasting /> },
-        ],
-      },
+      { path: "services", element: <Services /> },
+      { path: "services/personal-branding", element: <PersonalBranding /> },
+      { path: "services/social-media-management", element: <SocialMediaManagement /> },
+      { path: "services/video-production", element: <VideoProduction /> },
+      { path: "services/public-relations", element: <PublicRelations /> },
+      { path: "services/corporate-podcasting", element: <CorporatePodcasting /> },
     ],
   },
 ]);

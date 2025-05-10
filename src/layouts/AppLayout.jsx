@@ -8,7 +8,7 @@ const AppLayout = () => {
     <div className="flex flex-col min-h-screen relative">
       <ScrollToTop />
       <Header />
-      <main className="flex-1 pt-20 bg-[hsl(var(--background))]">
+      <main className="flex-1 flex justify-center items-center  pt-10 bg-[hsl(var(--background))]">
         <Outlet />
       </main>
       <Footer />
