@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FaMicrophoneAlt,
   FaHeadphonesAlt,
@@ -7,43 +7,46 @@ import {
   FaUpload,
   FaRetweet,
   FaUserCheck,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const podcastServices = [
   {
-    title: 'Podcast Concept Development',
+    title: "Podcast Concept Development",
     icon: <FaMicrophoneAlt className="text-xl sm:text-2xl text-white/80" />,
-    description: 'Strategy, show format, naming, and positioning.',
+    description: "Strategy, show format, naming, and positioning.",
   },
   {
-    title: 'Professional Recording',
+    title: "Professional Recording",
     icon: <FaHeadphonesAlt className="text-xl sm:text-2xl text-white/80" />,
-    description: 'In-studio or remote sessions with broadcast-quality equipment.',
+    description:
+      "In-studio or remote sessions with broadcast-quality equipment.",
   },
   {
-    title: 'Audio & Video Editing',
+    title: "Audio & Video Editing",
     icon: <FaEdit className="text-xl sm:text-2xl text-white/80" />,
-    description: 'Clean, polished episodes ready for distribution across platforms.',
+    description:
+      "Clean, polished episodes ready for distribution across platforms.",
   },
   {
-    title: 'Show Branding',
+    title: "Show Branding",
     icon: <FaPalette className="text-xl sm:text-2xl text-white/80" />,
-    description: 'Custom intros, outros, cover art, and promotional graphics.',
+    description: "Custom intros, outros, cover art, and promotional graphics.",
   },
   {
-    title: 'Publishing & Distribution',
+    title: "Publishing & Distribution",
     icon: <FaUpload className="text-xl sm:text-2xl text-white/80" />,
-    description: 'Seamless uploads to Spotify, Apple Podcasts, YouTube & more.',
+    description: "Seamless uploads to Spotify, Apple Podcasts, YouTube & more.",
   },
   {
-    title: 'Content Repurposing',
+    title: "Content Repurposing",
     icon: <FaRetweet className="text-xl sm:text-2xl text-white/80" />,
-    description: 'Turn episodes into social clips, reels, quotes, and blog posts.',
+    description:
+      "Turn episodes into social clips, reels, quotes, and blog posts.",
   },
   {
-    title: 'Guest Management',
+    title: "Guest Management",
     icon: <FaUserCheck className="text-xl sm:text-2xl text-white/80" />,
-    description: 'From outreach to scheduling and briefing.',
+    description: "From outreach to scheduling and briefing.",
   },
 ];
 
@@ -56,17 +59,19 @@ const CorporatePodcasting = () => {
         </h2>
 
         <p className="text-lg sm:text-xl text-center font-playfair text-white/90">
-          At Celebralux, we help brands and leaders launch high-impact podcasts that build trust,
-          grow authority, and spark meaningful conversations. Whether you’re starting from scratch
-          or scaling an existing show, we offer end-to-end podcasting solutions—designed for clarity,
+          At Celebralux, we help brands and leaders launch high-impact podcasts
+          that build trust, grow authority, and spark meaningful conversations.
+          Whether you’re starting from scratch or scaling an existing show, we
+          offer end-to-end podcasting solutions—designed for clarity,
           consistency, and quality.
         </p>
 
         <p className="text-base sm:text-lg text-white/80 text-center max-w-3xl mx-auto">
-          Our state-of-the-art studio and expert production team ensure your message sounds as good as it looks.
+          Our state-of-the-art studio and expert production team ensure your
+          message sounds as good as it looks.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {podcastServices.map((service, index) => (
             <div
               key={index}
@@ -79,10 +84,36 @@ const CorporatePodcasting = () => {
               <p className="text-sm text-white/80">{service.description}</p>
             </div>
           ))}
+        </div> */}
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {podcastServices.map((item, index) => {
+            const isLast = index === podcastServices.length - 1;
+            return (
+              <div
+                key={index}
+                className={`bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-3
+        ${
+          isLast
+            ? "md:col-span-2 md:justify-self-center lg:col-span-1 lg:col-start-2"
+            : ""
+        }`}
+              >
+                <div className="flex items-center gap-3">
+                  {item.icon}
+                  <h3 className="text-white font-medium text-base sm:text-lg">
+                    {item.title}
+                  </h3>
+                </div>
+                  <p className="text-sm text-white/80">{item.description}</p>
+              </div>
+            );
+          })}
         </div>
 
         <p className="text-base sm:text-lg text-white/80 text-center max-w-3xl mx-auto">
-          Whether you’re creating internal leadership content, thought leadership series, or branded shows—Celebralux is your all-in-one partner for professional podcast production and brand amplification.
+          Whether you’re creating internal leadership content, thought
+          leadership series, or branded shows—Celebralux is your all-in-one
+          partner for professional podcast production and brand amplification.
         </p>
 
         <p className="text-xl sm:text-2xl font-semibold text-center italic font-playfair text-white/90">

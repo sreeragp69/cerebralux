@@ -56,18 +56,28 @@ const SocialMediaManagement = () => {
           From content calendars to community engagement and performance analytics, we handle every detail so your digital presence thrives consistently and impactfully.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-3"
-            >
-              <div className="flex items-center gap-3">
-                {item.icon}
-                <h3 className="text-white font-medium text-base sm:text-lg">{item.title}</h3>
+         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((item, index) => {
+            const isLast = index === services.length - 1;
+            return (
+              <div
+                key={index}
+                className={`bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-3
+        ${
+          isLast
+            ? "md:col-span-2 md:justify-self-center lg:col-span-1 lg:col-start-2"
+            : ""
+        }`}
+              >
+                <div className="flex items-center gap-3">
+                  {item.icon}
+                  <h3 className="text-white font-medium text-base sm:text-lg">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <p className="text-xl sm:text-2xl font-semibold text-center italic font-playfair text-white/90">

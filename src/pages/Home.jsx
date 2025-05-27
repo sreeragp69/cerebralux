@@ -1,11 +1,11 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const Home = () => {
+  
   return (
     <section className="flex justify-center items-center sm:pb-24 bg-[hsl(var(--background))] h-screen">
       <div className="max-w-7xl mx-auto text-center px-4">
-        {/* Title animation */}
         <motion.h1
           initial={{ opacity: 0, y: 2 }}
           animate={{ opacity: 1, y: 0 }}
@@ -15,8 +15,6 @@ const Home = () => {
           Kerala's Leading Personal
           <br className="hidden sm:block" /> Branding Powerhouse
         </motion.h1>
-
-        {/* Paragraph animation */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,8 +25,6 @@ const Home = () => {
           build strong digital identities — both online and offline — by telling
           their stories in the most engaging, impactful ways.
         </motion.p>
-
-        {/* Button animation */}
         <a
           href="https://wa.me/918848075299?text=Hi%2C%20I%20have%20an%20enquiry%20about%20Celebralux"
           target="_blank"

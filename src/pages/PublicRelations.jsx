@@ -40,10 +40,9 @@ const PublicRelations = () => {
     <section className="pt-20 pb-20 px-4 bg-[hsl(var(--background))] text-white fade-in">
       <div className="max-w-6xl mx-auto space-y-12">
         <h2 className="text-3xl sm:text-4xl font-bold text-center font-playfair">
-        Build credibility. Earn attention. Influence perception.
+          Build credibility. Earn attention. Influence perception.
         </h2>
 
-      
         <p className="text-base sm:text-lg text-white/80 text-center max-w-3xl mx-auto">
           At Celebralux, our Public Relations services are designed to strategically position you and your brand in front of the right audience, at the right time, with the right story.
         </p>
@@ -52,11 +51,54 @@ const PublicRelations = () => {
           We go beyond press releases—we craft narratives that resonate, build authority, and open doors. Whether you’re a founder, expert, creator, or thought leader, our goal is to get you seen, heard, and respected across digital and traditional media.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {prServices.map((service, index) => (
+        {/* For small and medium screens */}
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:hidden gap-6">
+          {prServices.slice(0, 4).map((service, index) => (
             <div
               key={index}
               className="bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-4"
+            >
+              <div className="flex items-center gap-3">
+                {service.icon}
+                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+              </div>
+              <p className="text-sm text-white/80">{service.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Last card centered in md */}
+        <div className="hidden md:flex lg:hidden justify-center mt-6">
+          <div className="w-full md:w-[calc(50%-0.75rem)] bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-4">
+            <div className="flex items-center gap-3">
+              {prServices[4].icon}
+              <h3 className="text-lg font-semibold text-white">{prServices[4].title}</h3>
+            </div>
+            <p className="text-sm text-white/80">{prServices[4].description}</p>
+          </div>
+        </div>
+
+        {/* For large screens */}
+        <div className="hidden lg:grid grid-cols-3 gap-6">
+          {prServices.slice(0, 3).map((service, index) => (
+            <div
+              key={index}
+              className="bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-4"
+            >
+              <div className="flex items-center gap-3">
+                {service.icon}
+                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+              </div>
+              <p className="text-sm text-white/80">{service.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden lg:flex justify-center gap-6 mt-6">
+          {prServices.slice(3).map((service, index) => (
+            <div
+              key={index}
+              className="w-[calc(33.333%-1rem)] bg-white/10 border border-white/10 p-6 rounded-xl backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-lg space-y-4"
             >
               <div className="flex items-center gap-3">
                 {service.icon}

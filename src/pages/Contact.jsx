@@ -40,22 +40,16 @@ const Contact = () => {
               Ready to make a global impact? Ask about our personal branding,
               PR, and production packages.
             </p>
-            <button
-              className="w-full mb-6 bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:scale-105"
+            <a
+              href="https://calendly.com/your-link/15min" // Replace with your actual link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full mb-6 bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:scale-105 text-center block py-2 rounded"
               aria-label="Book a 15-minute call with a branding specialist"
             >
               Book a 15-minute call
-            </button>
-            <div className="bg-white/10 p-3 md:p-6 rounded-lg flex items-center gap-4 mb-4">
-              <FaRegEnvelope className="h-4 w-4 md:h-6 md:w-6 text-white/70" />
-              <a
-                href="mailto:info.celebralux@gmail.com"
-                className="text-white hover:text-white/90 transition-colors"
-                aria-label="Send an email to info.celebralux@gmail.com"
-              >
-                info.celebralux@gmail.com
-              </a>
-            </div>
+            </a>
+
             <p className="text-white/90 text-center mt-4">
               Our personal branding specialists are looking forward to meeting
               you and helping craft your personalized global identity.

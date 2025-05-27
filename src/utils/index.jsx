@@ -3,11 +3,11 @@ import { FaRegCalendar } from "react-icons/fa";
 import { IoVideocamOutline } from "react-icons/io5";
 import { MdMicNone } from "react-icons/md";
 
-import personalBranding from "../assets/personal-branding.jpeg";
-import socialMediaManagement from "../assets/social-media-management.jpeg";
-import videoProduction from "../assets/video-production.jpeg";
-import publicRelations from "../assets/public-relations.jpeg";
-import corporatePodcasting from "../assets/corporate-podcasting.jpeg";
+import personalBranding from "../assets/personalBranding.webp";
+import socialMediaManagement from "../assets/social-media.webp";
+import videoProduction from "../assets/video-production.webp";
+import publicRelations from "../assets/punlicRelation.webp";
+import corporatePodcasting from "../assets/corporatePodcast.webp";
 
 const servicesData = [
   {
